@@ -1,0 +1,111 @@
+Common git Commands and How to Use Them:
+
+1. Cloning a Repository
+-----------------------
+git clone <repository_url>
+Purpose: Creates a local copy of a remote repository.
+Example:
+git clone git@github.com:YourUsername/YourRepo.git
+
+2. Navigating Directories
+-------------------------
+cd <path_to_directory>
+Purpose: Changes the current working directory to <path_to_directory>.
+Example:
+cd C:\Users\YourUser\Projects\YourRepo
+
+3. Creating or Modifying Files
+------------------------------
+echo "Your content here" > filename.ext
+Purpose: Creates a new file filename.ext with the content "Your content here".
+> vs >>:
+>: Overwrites the file if it exists.
+>>: Appends to the file if it exists.
+
+4. Viewing File Contents
+------------------------
+cat filename.ext
+Purpose: Displays the contents of filename.ext.
+Note: On Windows PowerShell, you can use Get-Content filename.ext.
+
+5. Staging Changes
+------------------
+Stage a single file:
+git add test.txt
+
+Stage all changes:
+git add .
+
+6. Committing Changes
+---------------------
+git commit -m "Your commit message"
+Purpose: Records staged changes to the repository with a descriptive message.
+Best Practices:
+- Write clear, concise commit messages.
+- Use the imperative mood (e.g., "Add feature", "Fix bug").
+
+7. Pushing Changes to a Remote Repository
+-----------------------------------------
+git push
+Purpose: Sends committed changes to the remote repository.
+Note: If you're pushing for the first time or have multiple branches/remotes, you may need to specify:
+git push -u origin main
+-u: Sets the upstream tracking reference.
+
+8. Pulling Changes from a Remote Repository
+-------------------------------------------
+git pull
+Purpose: Fetches and merges changes from the remote repository to your local repository.
+
+9. Checking Repository Status
+-----------------------------
+git status
+Purpose: Displays the state of the working directory and staging area.
+Shows:
+- Modified files.
+- Files staged for commit.
+- Untracked files.
+
+10. Viewing Commit History
+--------------------------
+git log
+Purpose: Shows the commit history.
+Options:
+git log --oneline: Displays a simplified log.
+
+11. Creating and Switching Branches
+-----------------------------------
+Create a new branch:
+git branch new-branch-name
+
+Switch to a branch:
+git checkout new-branch-name
+
+Create and switch to a new branch:
+git checkout -b new-branch-name
+
+12. Merging Branches
+--------------------
+git merge <branch-name>
+Purpose: Merges the specified branch into the current branch.
+
+13. Deleting a Branch
+---------------------
+Delete a local branch:
+git branch -d branch-name
+
+Delete a remote branch:
+git push origin --delete branch-name
+
+14. Setting Upstream Branch
+---------------------------
+git push -u origin branch-name
+Purpose: Sets the default remote branch for the current local branch.
+
+15. Stashing Changes
+--------------------
+git stash
+Purpose: Temporarily saves changes that are not ready to be committed.
+
+Apply stashed changes:
+git stash apply
